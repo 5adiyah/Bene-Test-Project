@@ -1,4 +1,10 @@
-sadio_frgk:
+frgk_css:
   css:
     theme:
       css/style.css: {}
+
+frgk_js:
+  js:
+    js/main.js: {}
+  dependencies:
+    - core/jquery

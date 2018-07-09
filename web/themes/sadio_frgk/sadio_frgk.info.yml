@@ -1,0 +1,7 @@
+name: Free Geek Test
+type: theme
+description: FreeGeek Sub Theme for Bene
+package: Other
+core: 8.x
+
+base theme: false

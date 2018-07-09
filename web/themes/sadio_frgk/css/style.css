@@ -1,3 +1,8 @@
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,900";
+html {
+  box-sizing: border-box; }
 
+*, *::after, *::before {
+  box-sizing: inherit; }
 
 /*# sourceMappingURL=style.css.map */

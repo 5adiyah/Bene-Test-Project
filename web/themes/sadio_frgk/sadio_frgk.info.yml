@@ -5,3 +5,6 @@ package: Other
 core: 8.x
 
 base theme: false
+
+libraries:
+  - sadio_frgk/sadio_frgk

@@ -16,7 +16,7 @@ end
 
 desc 'Watch sass'
 task :sasswatch do
-  system 'sass -r sass-globbing --watch sass/style.scss:css/style.css'
+  system 'sass -r sass-globbing --watch ./sass/style.scss:css/style.css'
 end
 
 desc 'Build JS'

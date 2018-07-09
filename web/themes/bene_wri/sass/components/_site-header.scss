@@ -1,0 +1,29 @@
+.site-header .desktop-nav .menu--main .menu .menu-item { margin-left: 0; }
+
+.site-header .desktop-nav .menu--utility .menu .menu-item { margin-left: 1rem; }
+
+.site-header .logo-wrapper {
+  display: block;
+  @include mq(mobile) {
+    align-items: left;
+    max-width: 70%;
+  }
+
+  .region-site-branding {
+    @include mq(desktop) {
+      line-height: 5.8rem;
+    }
+  }
+
+  .site-logo {
+    @include mq(mobile) {
+      display: block;
+      margin-top: 0.75rem;
+    }
+  }
+
+  img {
+    width: 100%;
+    vertical-align: bottom;
+  }
+}

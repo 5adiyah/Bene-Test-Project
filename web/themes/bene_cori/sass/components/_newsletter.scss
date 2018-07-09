@@ -1,0 +1,29 @@
+.block-bene-newsletter-signup-block {
+  
+  .external-newsletter {
+    background: $green;
+    padding: 1.5rem 1rem;
+  }
+
+  .external-newsletter a {
+    color: $white;
+    @include font-style('oswald-semibold');
+    font-size: rem(20);
+    text-transform: uppercase;
+
+    &::after { 
+      content: '>'; 
+      margin-left: 0.5rem;
+    }
+
+  }
+
+  .external-newsletter a.button {
+    background-color: $orange;
+    border-radius: 0;
+
+    &:hover {
+      background-color: $dark-orange
+    }
+  }
+}

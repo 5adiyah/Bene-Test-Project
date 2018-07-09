@@ -1,0 +1,96 @@
+// Green
+//:root {
+//  --color-theme-primary: #669966;
+//  --color-theme-primary-darken20: #346636; // darken(#669966, 20%);
+//  --color-theme-primary-lighten20: #9BD099; // lighten(#669966, 20%);
+//  --color-theme-primary-bright: #479947;
+//  --color-theme-primary-bright-darken20: #006516; // darken(#50CFE3, 20%);
+//  --color-theme-primary-bright-lighten20: #7ED079; // lighten(#50CFE3, 20%);
+//  --color-text-primary: black;
+//  --color-text-secondary: #5C5B5B;
+//  --color-text-accent: #5C5B5B;
+//  --color-text-placeholder: #979797;
+//  --color-text-medium-dark: #7C7C7C;
+//  --color-text-inverse: white;
+//  --color-text-light: #D8D8D8;
+//  --color-background-default: white;
+//  --color-background-lightest: #D8D8D8;
+//  --color-background-darker: #5C5B5B;
+//  --color-background-darkest: black;
+//
+//  --color-social-icon: #479947;
+//  --color-social-icon-darken20: #006516; // darken(#50CFE3, 20%);
+//
+//
+//}
+
+:root {
+  --color-theme-primary: #ff99cc;
+  --color-theme-primary-darken20: #ff66b3; // darken(#ff99cc, 20%);
+  --color-theme-primary-lighten20: #ffcce6; // lighten(#ff99cc, 20%);
+  --color-theme-primary-bright: #ff4da6;
+  --color-theme-primary-bright-darken20: #FF1A8D; // darken(#ff4da6, 20%);
+  --color-theme-primary-bright-lighten20: #FF80C0; // lighten(#ff4da6, 20%);
+  --color-text-primary: black;
+  --color-text-secondary: #33001a;
+  --color-text-accent: #33001a;
+  --color-text-placeholder: #ffe6f2;
+  --color-text-medium-dark: #660033;
+  --color-text-inverse: white;
+  --color-text-light: #ffe6f2;
+  --color-background-default: #ffe6f2;
+  --color-background-lightest: white;
+  --color-background-darker: #660033;
+  --color-background-darkest: black;
+
+  --color-social-icon: #ff99cc;
+  --color-social-icon-darken20: #ff66b3; // darken(#ff99cc, 20%);
+}
+
+.social-links{
+//  --color-social-icon: #479947;
+//  --color-social-icon-darken20: #006516;
+//
+  // bene_footer_block
+  //--bene_footer_block-social-icon-size: var(--social-icon-size);
+  //--bene_footer_block-social-background-color: var(--color-social-icon);
+  //--bene_footer_block-social-hover-background-color: var(--color-social-icon-darken20);
+  //--bene_footer_block-social-border-color: var(--color-social-icon);
+  //--bene_footer_block-social-hover-border-color: var(--color-social-icon-darken20);
+//
+}
+// Teal
+//:root {
+//  --color-theme-primary: #129FB5;
+//  --color-theme-primary-darken20: #00859A; // darken(#129FB5, 20%);
+//  --color-theme-primary-lighten20: #42BAD1; // lighten(#129FB5, 20%);
+//  --color-theme-primary-bright: #50CFE3;
+//  --color-theme-primary-bright-darken20: #0CC6E3; // darken(#50CFE3, 20%);
+//  --color-theme-primary-bright-lighten20: #94D8E3; // lighten(#50CFE3, 20%);
+//  --color-text-primary: black;
+//  --color-text-secondary: #5C5B5B;
+//  --color-text-accent: #5C5B5B;
+//  --color-text-placeholder: #979797;
+//  --color-text-medium-dark: #7C7C7C;
+//  --color-text-inverse: white;
+//  --color-text-light: #D8D8D8;
+//  --color-background-default: white;
+//  --color-background-lightest: #D8D8D8;
+//  --color-background-darker: #5C5B5B;
+//  --color-background-darkest: black;
+//
+//  --social-icon-color: #50CFE3;
+//  --social-icon-color-darken20: #1C9DB1; // darken(#50CFE3, 20%);
+//}
+
+//-- VENDOR
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800|Oswald:400,500,600,700';
+
+//-- CONFIG
+@import 'config/*';
+
+//-- LAYOUT
+@import 'layout/*';
+
+//-- COMPONENTS
+@import 'components/*';

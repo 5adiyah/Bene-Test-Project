@@ -1,0 +1,39 @@
+.block-bene-footer-block {
+  .menu .menu-item a {
+    text-transform: uppercase;
+  }
+
+  .contact-links .additional-contact {
+    margin-top: 1rem;
+  }
+
+  div.social-links {
+    @include align-content(flex-start);
+    
+    @include mq(mobile) {
+      display: inline-block;
+    }
+
+    span {
+      min-width: auto;
+      padding: 0 rem(4) rem(8) rem(4);
+      @include mq(mobile) {
+        margin-right: 0.5rem;
+      }
+      a {
+        margin: 0;
+      }
+    }
+  }
+
+  .social-links a {
+    border-radius: 0;
+    &.google {
+      background-size: 25px 20px;
+    }
+
+    //&:hover,
+    //&:focus,
+    //&:active { background-color: var(--bene_footer_block-social-hover-background-color); }
+  }
+}

@@ -1,0 +1,77 @@
+.paragraph--type--tiles {
+
+  .field--name-field-tiles {
+    padding: 0;
+  }
+
+  > .field--name-field-title {
+    color: $blue-2;
+    font-size: rem(32);
+    @include font-style('ss-bold');
+  }
+
+  .field--name-field-tiles > .field__item {
+    margin-bottom: 0;
+    padding-bottom: rem(24);
+    padding-top: rem(24);
+    text-align: left;
+    @include mq(desktop) { margin-bottom: 0; }
+    @include mq(tablet) { margin-bottom: 1rem; }
+  }
+  .field--name-field-tiles > .field__item .tile-text.center {
+    text-align: center;
+  }
+  .field--name-field-tiles > .field__item .tile-text.right {
+    text-align: right;
+  }
+
+  .field--name-field-tiles > .field__item .field--name-field-image {
+    height: auto;
+    width: 100%;
+  }
+}
+
+
+.paragraph--type--tiles .field--name-field-tiles > .field__item .paragraph--type--tile {
+
+  .bg-header {
+    display: none;
+  }
+
+  .field--name-field-image {
+    line-height: 0;
+    width: 100%;
+
+    img { width: 100%; }
+  }
+
+  .tile-text {
+    background-color: $white;
+    padding: 1rem;
+  }
+
+  .tile-text > a {
+    font-size: rem(24);
+
+    &:hover {
+      color: $green-1;
+    }
+
+    .field--name-field-title {
+      font-size: rem(24);
+      margin-top: 0;
+    }
+  }
+
+  .field--name-field-link a {
+    font-size: rem(18);
+    line-height: rem(31);
+    text-decoration: underline;
+
+    &:hover {
+      color: $green-1;
+    }
+  }
+
+  .tile-text a .field--name-field-title { margin-top: 0; }
+}

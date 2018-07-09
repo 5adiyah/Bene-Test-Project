@@ -1,0 +1,35 @@
+.field--name-bene-listing-view {
+  .view-filters {
+    @include span-columns(3);
+  }
+
+  .view-content {
+    @include span-columns(8);
+    @include shift(1);
+  }
+
+  .views-row {
+    clear: both;
+    @include span-columns(12);
+  }
+  
+  .node--view-mode-teaser .image {
+    @include span-columns(3);
+
+    img { 
+      height: auto;
+      width: 100%; 
+    }
+  }
+
+  .node--view-mode-teaser .text {
+    @include span-columns(8);
+    @include shift(0.25);
+  }
+
+  .node--view-mode-teaser .field--name-bene-intro {
+    padding: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+}

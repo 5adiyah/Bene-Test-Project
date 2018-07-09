@@ -1,0 +1,120 @@
+body {
+  @include font-style(light);
+  font-size: 16px;
+}
+
+h1 {
+  @include font-style('open-extra');
+  font-size: rem(32);
+  text-transform: uppercase;
+
+  @include mq(tablet) {
+    font-size: rem(50);
+  }
+
+  @include mq(desktop) {
+    font-size: rem(50);
+  }
+}
+
+h2 {
+  color: bbv(color-text-header); // in case css variables are not supported
+  color: var(--base_style-header-color);
+  @include font-style('oswald-semibold');
+  font-size: rem(28);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+
+  a {
+    color: bbv(--color-theme-primary-bright); // in case css variables are not supported
+    color: var(--base_style-header-link-color);
+  }
+  a:hover {
+    color: bbv(color-theme-primary); // in case css variables are not supported
+    color: var(--base_style-header-link-color-hover);
+  }
+}
+
+h3 {
+  color: bbv(color-text-header); // in case css variables are not supported
+  color: var(--base_style-header-color);
+  @include font-style('open');
+  font-size: rem(30);
+  font-weight: normal;
+  line-height: rem(41);
+  margin-bottom: 0.5rem;
+
+  a {
+    color: bbv(--color-theme-primary-bright); // in case css variables are not supported
+    color: var(--base_style-header-link-color);
+  }
+  a:hover {
+    color: bbv(color-theme-primary); // in case css variables are not supported
+    color: var(--base_style-header-link-color-hover);
+  }
+}
+
+h4 {
+  color: bbv(color-text-header); // in case css variables are not supported
+  color: var(--base_style-header-color);
+  @include font-style('open');
+  font-size: rem(24);
+  font-weight: normal;
+  line-height: rem(33);
+  letter-spacing: 0;
+  margin-bottom: 0.5rem;
+  text-transform: none;
+
+  a {
+    color: bbv(--color-theme-primary-bright); // in case css variables are not supported
+    color: var(--base_style-header-link-color);
+  }
+  a:hover {
+    color: bbv(color-theme-primary); // in case css variables are not supported
+    color: var(--base_style-header-link-color-hover);
+  }
+}
+
+h5 {
+  color: bbv(color-text-header); // in case css variables are not supported
+  color: var(--base_style-header-color);
+  @include font-style('open-bold');
+  font-size: rem(18);
+  line-height: rem(24);
+  letter-spacing: 0;
+  margin-bottom: 0.5rem;
+  text-transform: none;
+
+  a {
+    color: bbv(--color-theme-primary-bright); // in case css variables are not supported
+    color: var(--base_style-header-link-color);
+  }
+  a:hover {
+    color: bbv(color-theme-primary); // in case css variables are not supported
+    color: var(--base_style-header-link-color-hover);
+  }
+}
+
+a {
+  color: bbv(--color-theme-primary-bright); // in case css variables are not supported
+  color: var(--base_style-header-link-color);
+  &:hover {
+    color: bbv(color-theme-primary); // in case css variables are not supported
+    color: var(--base_style-header-link-color-hover);
+  }
+}
+a.button {
+  @include button-cta;
+}
+
+// Editor styles
+.byline {
+  color: bbv(color-text-lighter);
+  color: var(--base_style-byline-color);
+  font-size: rem(14);
+  @include font-style('open-italic');
+  line-height: rem(18);
+  margin-bottom: rem(32);
+  margin-top: 0;
+  text-transform: none;
+}

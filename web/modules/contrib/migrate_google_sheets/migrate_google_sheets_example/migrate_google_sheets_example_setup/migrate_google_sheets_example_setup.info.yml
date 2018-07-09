@@ -1,0 +1,11 @@
+type: module
+name: Migrate Google Sheets Example Setup
+description: 'Separate site configuration for the example from the actual migration.'
+package: Migration
+# core: 8.x
+hidden: 1
+# Information added by Drupal.org packaging script on 2017-01-04
+version: '8.x-1.0-beta1'
+core: '8.x'
+project: 'migrate_google_sheets'
+datestamp: 1483566244

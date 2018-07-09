@@ -1,0 +1,16 @@
+.block-system-branding-block  {
+  min-width: 0;
+}
+.block-system-branding-block a {
+  display: block;
+  width: rem(88.32);
+  @include mq(mobile) { 
+    width: rem(74.41); 
+    img { width: 100%; }
+  }
+}
+.logo-wrapper {
+  .site-logo img {
+    text-align: left;
+  }
+}

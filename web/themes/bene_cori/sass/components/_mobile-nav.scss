@@ -1,0 +1,79 @@
+a.mobile-menu-toggle {
+  color: $white;
+  &:hover { color: $white; }
+  div span,
+  div span:before, 
+  div span:after,
+  &.active div span:before, 
+  &.active div span:after {
+    background: $white;
+
+  }
+}
+
+.mobile-nav {
+  .region-primary-nav {
+    background: $blue;
+  }
+  
+  .menu {
+    text-align: center;
+  }
+  
+  .menu a {
+    color: $white;
+    border-bottom: none;
+    @include font-style('oswald-semibold');
+    font-size: rem(22);
+    padding: 0.5rem;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .menu--main {
+    li:first-of-type { padding-top: 1rem; }
+
+    a {
+      @include font-style('black');
+      font-size: rem(18);
+    }
+  }
+
+  .menu--utility {
+    li:last-of-type { padding-bottom: 1rem; }
+    
+    .menu li a {
+      @include font-style('oswald-light');
+      font-size: rem(18);
+      padding: 0.5rem;
+    }
+  }
+
+  .menu--utility .menu li:last-child a {
+    background: none;
+    @include font-style('oswald-light');
+    font-weight: normal;
+    color: $white;
+  }
+} 
+
+// mobile menu button
+a.mobile-button {
+  background: $white;
+  color: $orange;
+  display: inline-block;
+  @include font-style('oswald-bold');
+  font-size: rem(16);
+  max-height: rem(45);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 1.75rem;
+  right: 5rem;
+
+  @include mq(desktop) {
+    display: none;
+  }
+}

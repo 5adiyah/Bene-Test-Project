@@ -1,0 +1,30 @@
+// Admin adjustments (WRI-Bene Theme)
+body.path-user .region.region-content,
+body.user-logged-in .region.region-content {
+  background-color: transparent;
+}
+.user-logged-in {
+  #block-bene-child-local-tasks {
+    li {
+      background-color: $white;
+      a {
+        background-color: $blue-4;
+        &:hover {
+          background-color: $blue-2;
+        }
+        &.is-active {
+          background-color: $blue-1;
+        }
+      }
+    }
+    .show-hide {
+      @include mq(desktop) {
+        height: rem(46);
+        line-height: rem(46);
+      }
+      span {
+        background-image: url('../img/svg/line-arrow.svg') !important;
+      }
+    }
+  }
+}

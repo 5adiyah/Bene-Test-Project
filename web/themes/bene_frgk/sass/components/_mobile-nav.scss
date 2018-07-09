@@ -1,0 +1,86 @@
+.mobile-menu-toggle {
+  div span,
+  div span:before, 
+  div span:after,
+  &.active div span:before, 
+  &.active div span:after {
+    background-color: $black;
+  }
+  
+  div:hover span,
+  div:hover span:before,
+  div:hover span:after {
+    background-color: $black;
+  }
+  
+  &.active div span {
+    background-color: transparent;
+  }
+}
+
+.mobile-nav {
+  .menu {
+    text-align: center;
+  }
+  
+  .menu a {
+    color: $white;
+    border-bottom: none;
+    padding: 1rem;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .menu--main {
+    li:first-of-type { padding-top: 1rem; }
+
+    a {
+      @include font-style('black');
+      font-size: rem(18);
+    }
+
+  }
+
+
+  .menu--utility {
+    li:last-of-type { padding-bottom: 1rem; }
+    
+    a {
+      @include font-style('regular');
+      font-size: rem(18);
+    }
+  }
+
+  .menu--utility .menu li:last-child a {
+	@include font-style('regular');
+    background: none;
+    color: $white;
+  }
+} 
+
+// mobile menu button
+a.mobile-button {
+  background: $purple;
+  color: $white;
+  display: inline-block;
+  @include font-style('bold');
+  font-size: rem(11);
+  line-height: rem(26);
+  max-height: rem(45);
+  padding: 0.1rem 0.5rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 2.05rem;
+  right: 5.4rem;
+  
+  &:hover {
+    background-color: $dark-purple;
+    color: $white;
+  }
+  
+  @include mq(desktop) {
+    display: none;
+  }
+}

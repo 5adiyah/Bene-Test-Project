@@ -1,0 +1,71 @@
+.site-header .desktop-nav {
+  // Remove carat from nested menu
+  .menu-item--collapsed {
+    list-style: none;
+  }
+
+  .menu--utility {
+    .menu-item a {
+      color: $gray;
+      font-size: rem(16);
+    }
+    
+    // Undo old donate button
+    .menu-item:last-child a {
+      background: none;
+      color: $gray;
+      border-radius: 0;
+      @include font-style('regular');
+      padding: 0;
+      top: 0;
+      text-transform: none;
+    }
+    
+    // This needs to be below the undo old donate button style so the last-child highlights properly
+    .menu-item--active-trail a,
+    .menu-item a:hover,
+    .menu-item a:focus,
+    .menu-item a.is-active {
+      color: $purple;
+    }
+  }
+  
+  .menu--main {
+    .menu-item a {
+      @include font-style('black');
+      font-size: rem(18);
+      letter-spacing: rem(0.54);
+
+      @include mq(inbetween-large) {
+        font-size: rem(16);
+      }
+      @include mq(inbetween-medium) {
+        font-size: rem(15);
+      }
+      @include mq(inbetween-small) {
+        font-size: rem(13);
+      }
+    }
+
+    .menu-item--active-trail a,
+    .menu-item a:hover,
+    .menu-item a:focus,
+    .menu-item a.is-active {
+      color: $purple;
+    }
+
+    // Donate button
+    .menu-item:last-child a {
+      color: $white;
+      background: $purple;
+      @include font-style('bold');
+      font-size: rem(13);
+      padding: 1rem;
+
+      &:hover,
+	  &:focus {
+        background-color: $dark-purple;
+      }
+    }
+  }
+}

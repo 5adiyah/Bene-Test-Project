@@ -1,0 +1,82 @@
+.page-node-type-news,
+.page-node-type-event {
+
+  .block-hero {
+    margin-bottom: 4rem;
+  }
+
+  .field--name-bene-date {
+    width: 65.88078%;
+    margin-left: 17.05961%;
+    padding: 0 2%;
+
+    time {
+      @include span-columns(12);
+    }
+  }
+
+
+  .field--name-bene-date time,
+  .field--name-bene-event-date-range time {
+    color: $green-1;
+    font-size: rem(16);
+    font-weight: normal;
+    text-align: left;
+  }
+
+  .field--name-bene-event-date-range {
+    margin-bottom: 0;
+  }
+
+  .block-system-main-block .field--name-bene-intro {
+    margin-left: 0;
+    color: $black;
+    margin-bottom: 0;
+    width: 100%;
+    p {
+      font-size: rem(16);
+      line-height: rem(31);
+      @include font-style('ss-semibold');
+    }
+  }
+
+  // Location
+  .field--name-bene-event-location {
+    &:after {
+      content: '';
+      clear: both;
+      border-bottom: rem(4) solid $gray-4;
+      display: block;
+    }
+
+    > .field__item{
+      display: inline;
+      float: left;
+    }
+
+    .field__label {
+      @include font-style('ss-bold');
+      font-size: rem(16);
+      color: $green-1;
+    }
+
+    .field__item {
+      color: $black;
+    }
+
+    .address {
+      display: none;
+    }
+
+    .organization,
+    .country,
+    .postal-code,
+    .administrative-area,
+    .locality,
+    .address-line2,
+    .address-line1 {
+      display: inline;
+      font-size: rem(16);
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.block-bene-home-page-feature-block {
+  text-align: left;
+  padding: 0 0;
+  background-color: transparent;
+  min-height: rem(380);
+
+  @include mq(desktop) {
+    min-height: rem(603);
+  }
+
+  .text {
+    background: var(--color-theme-primary);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    @include mq(desktop) {
+      background: rgba($pitch, 0.55);
+      padding: 2.5rem 2rem;
+    }
+
+    a {
+      color: var(--color-text-inverse);
+      text-decoration: underline;
+      margin-left: 0.3rem;
+      &:after { content: ' >'; }
+    }
+  }
+
+  .field--name-bene-lead {
+    font-size: rem(18);
+    @include font-style('ss-regular');
+    line-height: rem(30);
+
+    @include mq(mobile) {
+      line-height: normal;
+      padding-top: 0;
+    }
+  }
+
+  .field--name-bene-title {
+    @include font-style('ss-bold');
+    margin: 0 0 0;
+    max-width: none;
+    font-size: rem(24);
+    line-height: rem(31);
+    text-align: left;
+
+    @include mq(desktop) {
+      font-size: rem(42);
+      line-height: rem(54);
+    }
+  }
+
+  .field--name-bene-link {
+    position: static;
+    z-index: auto;
+    a {
+      border: medium none var(--color-text-primary);
+      padding: 0 0;
+      font-size: 1em;
+      text-transform: none;
+
+      &:hover {
+        color: var(--color-text-primary);
+      }
+    }
+  }
+
+}

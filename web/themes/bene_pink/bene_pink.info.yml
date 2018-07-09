@@ -1,0 +1,20 @@
+name: Bene Pink
+type: theme
+description: A sub theme for ThinkShout's Bene
+package: Other
+core: 8.x
+libraries:
+  - bene_pink/bene_pink
+  - bene_pink/addthis
+
+ckeditor_stylesheets:
+  - css/style.css
+
+base theme: bene_base
+
+regions:
+  site_branding: Site Branding
+  primary_nav: Primary Nav
+  secondary_nav: Secondary Nav
+  content: Content
+  footer: Footer

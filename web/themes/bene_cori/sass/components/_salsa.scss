@@ -1,0 +1,128 @@
+.page-salsa {
+	.region-content {
+    @include outer-container;
+    max-width: rem(900);
+    > .block {
+    	padding: 2rem 1rem;
+    }
+	}
+
+	// Columns
+	.column-wrapper {
+		@include mq(tablet) {
+			@include display(flex);
+			margin: 0 rem(-10);
+			.column {
+				padding: rem(10);
+			}
+		}
+	}
+
+	// Donations
+	#salsaDonationHeader {
+		margin-bottom: rem(20);
+	}
+	.donation {
+		min-width: auto;
+		&.salsa {
+			.orderform {
+				#left_container,
+				#right_container {
+					margin: 0; // Needs specificity to override other styles
+				}
+			}
+		}
+		#left_container,
+		#right_container {
+			float: none;
+			width: 100%;
+		}
+		#left_container {
+			@include mq(tablet) {
+				float: left;
+				padding-right: rem(12);
+				width: 49%;
+			}
+		}
+		#right_container {
+			@include mq(tablet) {
+				float: right;
+				padding-left: rem(12);
+				width: 49%;
+			}
+		}
+		#pre_donation_text {
+			margin: rem(20) 0;
+		}
+		#submit {
+			clear: both;
+			margin: rem(16) 0;
+			width: 100%;
+		}
+	}
+	#donation_amount {
+		margin-bottom: rem(30);
+		> .formRow {
+
+		}
+		.clearall {
+			clear: none;
+		}
+		#otheramt {
+			display: inline;
+			height: auto;
+			padding: rem(2);
+			width: auto;
+		}
+		#recurrence {
+			margin-bottom: rem(12);
+		}
+	}
+	#credit_card_information {
+		legend {
+			margin-bottom: rem(20);
+		}
+	}
+	#honorof,
+	#useCC {
+		margin-bottom: rem(20);
+	}
+	#dd-container {
+		.Select-input {
+			height: auto;
+		}
+	}
+}
+
+// Form styles
+.formRow {
+	margin-bottom: rem(12);
+}
+.stateSelect {
+	display: block;
+	margin: rem(5) 0 rem(12) 0;
+}
+input {
+	&.blockInput,
+	&#In_Honor_Name,
+	&#In_Honor_Email,
+	&#In_Memory_Name {
+		-webkit-appearance: none;
+    background-color: white;
+    border-radius: 0.1875rem;
+    border: 1px solid #D8D8D8;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    height: 3.125rem;
+    padding: 1.125rem 3.125rem 1.125rem 1.375rem;
+    width: 100%;
+    &:focus {
+    	outline: none; // This is bad for accessibility
+    }
+	}
+}
+input[type='submit'] {
+  @include button($white,$blue);
+}

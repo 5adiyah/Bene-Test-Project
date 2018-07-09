@@ -1,0 +1,173 @@
+.page-node-type-event,
+.page-node-type-news,
+.page-node-type-listing-page {
+  .block-hero {
+    background-image: linear-gradient(90deg, #229FB3 0%, #106572 100%);
+    padding: 2rem 1rem;
+    overflow: hidden;
+    min-height: rem(400);
+    margin-bottom: 4rem;
+
+    @include mq(mobile) {
+      min-height: rem(200);
+    }
+
+    h1 {
+      max-width: rem(1024);
+      line-height: rem(65);
+    }
+  }
+
+  .block-hero:after { display: none; }
+}
+
+.page-node-type-listing-page .views-element-container .view-bene-events {
+  display: block;
+}
+
+.field--name-bene-listing-view {
+  .view-filters {
+    @include mq(desktop) {
+      @include span-columns(3);
+    }
+
+    @include mq(desktop) {
+      form {
+        width: 95%;
+        padding: 0;
+        margin-left: 0;
+      }
+    }
+
+    .form-item {
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-item-search,
+    .form-item-keys {
+      margin-bottom: 2rem;
+    }
+
+    label {
+      @include font-style('open');
+      font-size: rem(14);
+      color: $black;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    input[type=text],
+    input[type=date] {
+      background: $ltgray;
+      border-radius: 0;
+      border: none;
+      display: block;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    input[type=submit] {
+      @include button-cta;
+      margin-top: 1rem;
+      padding: 1.5rem 2rem;
+    }
+
+    input[type=submit]#edit-reset {
+      background: none;
+      color: $green;
+      @include font-style('open');
+      padding: 0;
+      float: right;
+      font-size: rem(13);
+      letter-spacing: 0;
+      margin-right: 0;
+
+      &:hover { color: $dark-green; }
+    }
+
+    input[type=date] {
+      background: $ltgray url('../img/calendar.svg') 1rem center no-repeat;
+      padding-left: 3rem;
+    }
+  }
+
+  .view-content,
+  .view-empty {
+    display: block;
+
+    @include mq(desktop) {
+      @include span-columns(8);
+      @include shift(1);
+      margin-right: 0;
+    }
+  }
+
+  .views-row {
+    @include span-columns(12);
+    clear: both;
+    border-bottom: rem(4) solid $ltgray;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  .node--view-mode-teaser .image,
+  .node--view-mode-search-result .image {
+    @include span-columns(3);
+
+    @include mq(mobile) {
+      @include span-columns(12);
+    }
+
+    img { 
+      height: auto;
+      width: 100%; 
+    }
+  }
+
+  .node--view-mode-teaser .text,
+  .node--view-mode-search-result .text {
+    @include span-columns(8);
+    @include shift(0.25);
+
+    @include mq(mobile) {
+      @include span-columns(12);
+      @include shift(0);
+    }
+  }
+  
+  .node--view-mode-search-result .field--name-bene-event-date-range {
+    color: $text-gray;
+    margin: 0;
+    padding: 0;
+    float: none;
+    width: 100%;
+    
+    font-size: rem(16);
+    @include font-style('open');
+  }
+
+  .node--view-mode-teaser h4,
+  .node--view-mod-search-result h4 {
+    margin-bottom: 1rem;
+  }
+  
+  .node--view-mode-teaser .field--name-bene-intro,
+  .node--view-mode-teaser .field--name-bene-intro,
+  .node--view-mode-search-result .field--name-bene-intro,
+  .node--view-mode-search-result .field--name-bene-intro p {
+    margin-top: 0;
+    @include font-style('open');
+    font-size: 1rem;
+    line-height: rem(34);
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    width: 100%;
+  }
+}

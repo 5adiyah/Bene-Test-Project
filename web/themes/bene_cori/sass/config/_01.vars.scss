@@ -1,0 +1,133 @@
+/* Colors */
+$green:  #158496;
+$dark-green: #07535F;
+$ltgreen: #78CFDD;
+$blue:   #064075;
+$orange: #D56519;
+$dark-orange: #8E4615;
+
+$ltgray: #F3F3F3;
+$text-gray: #4E4E4E;
+
+$black:  #000000;
+$white:  #FFFFFF;
+
+/**
+ * First-level variables. Do not use these except to define
+ * buildup css variables in the next section.
+ *
+ * Notice that the variable names are specific to the color
+ * they refer to... that means these can be thrown out and a
+ * whole new set of variables brought in for a new theme.
+ **/
+$bene-a-level-variables: (
+  main-green:  #158496,
+  dark-green: #07535F,
+  ltgreen: #78CFDD,
+  main-blue:   #064075,
+  main-orange: #D56519,
+  dark-orange: #8E4615,
+
+  ltgray: #F3F3F3,
+  text-gray: #4E4E4E,
+
+  main-black:  #000000,
+  main-white:  #FFFFFF,
+
+  main-purple: #88287B,
+
+/* Fonts */
+  font1: "'Open Sans', sans-serif",
+  font2: "'Oswald', sans-serif",
+);
+
+// bav = bene a-level variable
+// access the above variables with this function
+@function bav($var-name) {
+  @return map-get($bene-a-level-variables, #{$var-name});
+}
+
+$bene-buildup-variables: (
+  color-theme-primary: bav(dark-green),
+  color-theme-primary-darken20: darken(bav(dark-green), 20%),
+  color-theme-primary-lighten20: lighten(bav(dark-green), 20%),
+  color-theme-primary-bright: bav(main-green),
+  color-theme-primary-bright-darken20: darken(bav(main-green), 20%),
+  color-theme-primary-bright-lighten20: lighten(bav(main-green), 20%),
+  color-text-primary: bav(main-black),
+  color-text-secondary: bav(dark-orange),
+  color-text-accent: bav(main-orange),
+
+  color-text-header: bav(main-blue),
+
+  color-text-placeholder: bav(ltgray),
+  color-text-medium-dark: bav(dark-orange),
+  color-text-inverse: bav(main-white),
+  color-text-light: bav(text-gray),
+
+  color-text-lighter: lighten(bav(text-gray), 15%),
+
+  color-text-link: bav(main-black),
+  color-background-default: bav(main-white),
+  color-background-lightest: bav(main-white),
+  color-background-accent: bav(main-orange),
+  color-background-darker: bav(dark-orange),
+  color-background-darkest: bav(main-black),
+
+  color-social-icon: bav(main-green),
+  color-social-icon-darken20: darken(bav(main-green), 20%),
+  social-icon-size: rem(40),
+
+  font-family-primary: "'Open Sans', sans-serif",
+  font-family-secondary: "'Oswald', sans-serif",
+  font-weight-menu-primary: 'bold',
+
+  // social-icon-size: rem(40),
+  font-weight-primary: normal,
+  font-weight-extra-heavy: 900,
+  font-style-primary: normal,
+  font-size-primary: rem(24),
+  font-size-header: rem(36),
+  gradient-direction: -180deg,
+  gradient-from-color: rgba(bav(main-black), 0.00), // 0.00 means fully transparent
+  gradient-to-color: rgba(bav(main-black), 0.00), // 0.00 means fully transparent, 1 means opaque
+);
+
+// bbv = bene buildup variable
+// access the above variables with this function
+@function bbv($var-name) {
+  @return map-get($bene-buildup-variables, #{$var-name});
+}
+
+
+:root {
+  // place each item in bene-buildup-variables here so they are defined in root scope
+  // output of this loop will be:
+  // ...
+  // --color-theme-primary: #129FB5;
+  // --color-theme-primary-darken20: #094e58;
+  // --color-theme-primary-lighten20: #41d5ec;
+  // --color-social-icon: #50CFE3;
+  // --color-social-icon-darken20: #1c9db1;
+  // ...
+  @each $name, $color-num in $bene-buildup-variables {
+    --#{$name}: #{$color-num};
+  }
+
+  /**
+   * These are the css variables that should be used throughout the scss code.
+   * They should also refer to the buildup variables above as much as possible.
+   **/
+
+  --base_style-button-cta-background-color: var(--color-background-accent);
+  --base_style-button-cta-background-color-hover: var(--color-background-darker);
+  --base_style-button-cta-color: var(--color-text-inverse);
+  --base_style-header-color: var(--color-text-header);
+  --base_style-header-link-color: var(--color-theme-primary-bright);
+  --base_style-header-link-color-hover: var(--color-theme-primary);
+  --base_style-byline-color: var(--color-text-lighter);
+
+  // bene_home_page_feature_block
+  --bene_home_page_feature_block-linear-gradient: linear-gradient(var(--bene-home-page-feature-block-linear-gradient-direction), var(--bene-home-page-feature-block-linear-gradient-color1), var(--bene-home-page-feature-block-linear-gradient-color2));
+
+}

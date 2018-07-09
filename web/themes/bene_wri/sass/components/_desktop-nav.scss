@@ -1,0 +1,83 @@
+.site-header { background-color: $white; }
+
+.site-header .desktop-nav {
+  // Remove carat from nested menu
+  .menu-item--collapsed { list-style: none; }
+
+  .menu {
+    @include mq(desktop) {
+      display: block;
+      text-align: right;
+    }
+
+    li { display: inline; }
+  }
+
+  .menu--utility {
+    @include mq(desktop) {
+      margin-top: 1.5rem;
+    }
+
+    .menu-item a {
+      color: $link_color;
+      @include font-style('ss-semibold');
+      font-size: rem(12);
+      text-transform: uppercase;
+    }
+
+    .menu-item.menu-item--active-trail a,
+    .menu-item a:hover,
+    .menu-item a.is-active { color: $gray-4; }
+
+    // Undo old donate button
+    .menu-item:last-child a {
+      background: none;
+      color: $link_color;
+      border-radius: 0;
+      @include font-style('ss-semibold');
+      line-height: inherit;
+      padding: 0;
+      top: 0;
+    }
+  }
+
+
+  .menu--main {
+    .menu-item a {
+      color: $link_color;
+      @include font-style('ss-bold');
+      font-size: rem(18);
+      letter-spacing: rem(0.54);
+      text-transform: none;
+
+      @include mq(desktop) { margin-left: 1.5rem; }
+
+      @include mq(custom) {
+        font-size: rem(14);
+        margin-left: 1rem;
+      }
+    }
+
+    .menu-item.menu-item--active-trail a,
+    .menu-item a:hover,
+    .menu-item a.is-active { color: $gray-4; }
+
+    // Donate button
+    .menu-item:last-child a {
+      color: $link_color;
+      background-color: none;
+      @include font-style('ss-bold');
+      font-size: rem(18);
+      padding: 0;
+
+      @include mq(custom) {
+        font-size: rem(14);
+      }
+    }
+
+    .menu-item:last-child a:hover {
+      background-color: none;
+      color: $link_color;
+    }
+  }
+}

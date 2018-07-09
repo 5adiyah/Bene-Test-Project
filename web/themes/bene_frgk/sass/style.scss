@@ -1,0 +1,41 @@
+:root {
+  --color-theme-primary: #55184D;
+  --color-theme-primary-darken20: #050205; // darken(#55184D, 20%);
+  --color-theme-primary-lighten20: #a52e95; // lighten(#55184D, 20%);
+  --color-theme-primary-bright: #88287B;
+  --color-theme-primary-bright-darken20: #391134; // darken(#88287B, 20%);
+  --color-theme-primary-bright-lighten20: #ca4cb9; // lighten(#88287B, 20%);
+  --color-text-primary: black;
+  --color-text-secondary: #727171;
+  --color-text-accent: #727171;
+  --color-text-placeholder: #F4F4F4;
+  --color-text-medium-dark: #727171;
+  --color-text-inverse: white;
+  --color-text-light: #F4F4F4;
+  --color-text-link: #B8D300; // chartreuse
+  --color-background-default: white;
+  --color-background-lightest: white;
+  --color-background-darker: #21586C;
+  --color-background-darkest: black;
+
+  --social-icon-color: white;
+  --social-icon-color-darken20: #F4F4F4;
+
+  --font-family-primary: 'Source Sans Pro', sans-serif;
+  --font-family-secondary: 'Source Sans Pro', sans-serif;
+  --font-weight-menu-primary: 'bold';
+}
+
+//-- VENDOR
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,900';
+@import 'lib/bourbon/bourbon';
+@import 'lib/neat/neat';
+
+//-- CONFIG
+@import 'config/*';
+
+//-- LAYOUT
+@import 'layout/*';
+
+//-- COMPONENTS
+@import 'components/*';

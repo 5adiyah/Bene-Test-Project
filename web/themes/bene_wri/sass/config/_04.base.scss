@@ -1,0 +1,21 @@
+body {
+  background-color: $gray;
+  font-size: 18px;
+  @include font-style('ss');
+  line-height: rem(32);
+}
+
+body.user-logged-in .region.region-content { background-color: transparent; }
+
+a {
+  color: $green-1;
+  &:hover { color: $gray-4; }
+}
+
+h3 {
+  color: $heading-color;
+  font-size: rem(32);
+  @include font-style('ss-bold');
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}

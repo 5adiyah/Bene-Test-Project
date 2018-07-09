@@ -1,0 +1,18 @@
+name: Wilamette River Initiative
+type: theme
+description: WRI's sub theme for Bene
+package: Other
+core: 8.x
+libraries:
+  - bene_wri/bene_wri
+ckeditor_stylesheets:
+  - css/ckeditor.css
+
+base theme: bene_base
+
+regions:
+  site_branding: Site Branding
+  primary_nav: Primary Nav
+  secondary_nav: Secondary Nav
+  content: Content
+  footer: Footer

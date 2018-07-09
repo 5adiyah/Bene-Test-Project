@@ -1,0 +1,65 @@
+.region-footer { background: $white; }
+
+.block-bene-footer-block {
+  background: var(--color-background-default) url('../img/wri-logo-stacked.svg') no-repeat center center;
+  background-size: rem(136);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .menu { margin-bottom: 1rem; }
+
+  .menu .menu-item a {
+    color: var(--color-text-link);
+  }
+
+  @include mq(mobile) {
+    background: var(--color-background-default) url('../logo.svg') no-repeat 1rem 1rem;
+    background-size: 70%;
+    display: block;
+    padding-top: 7rem;
+  }
+
+  div.social-links span:first-child a { margin-left: 0; }
+
+  div.social-links {
+    @include mq(mobile) { display: inline-block; }
+
+    span { @include mq(mobile) { margin-right: 0.5rem; } }
+  }
+
+  .wri-logo {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: rem(42);
+    margin-left: rem(-70);
+    width: rem(140);
+    height: rem(145);
+
+    @include mq(mobile) {
+      top: rem(10);
+      margin-left: rem(-197);
+      width: rem(300);
+      height: rem(90);
+    }
+  }
+
+  .contact-links {
+    color: var(--color-text-link);
+    font-size: rem(14);
+    text-align: right;
+
+    @include mq(mobile) {
+      text-align: left;
+    }
+  }
+
+  div.social-links {
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+
+  div.social-links a {
+    border-radius: 0;
+  }
+}

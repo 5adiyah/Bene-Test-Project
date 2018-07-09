@@ -1,0 +1,16 @@
+@mixin font-style($style) {
+  @if $style == 'ss' { // Regular
+    font-family: $font;
+    font-weight: 400;
+  } @else if $style == 'ss-italic' {
+    font-family: $font;
+    font-weight: 400;
+    font-style: italic;
+  } @else if $style == 'ss-semibold' {
+    font-family: $font;
+    font-weight: 600;
+  } @else if $style == 'ss-bold' {
+    font-family: $font;
+    font-weight: 700;
+  }
+}

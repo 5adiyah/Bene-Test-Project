@@ -1,0 +1,57 @@
+body {
+  @include font-style('regular');
+  font-size: 20px;
+  color: $black;
+
+  @include mq(mobile) {
+    font-size: 16px;
+    line-height: rem(26);
+  }
+}
+
+h1 {
+  @include font-style('black');
+  font-size: rem(32);
+
+  @inlcude mq(tablet) {
+    font-size: rem(50);
+  }
+
+  @inlcude mq(desktop) {
+    font-size: rem(50);
+  }
+}
+
+h2 {
+  color: $black;
+  @include font-style('regular');
+  font-size: rem(38);
+  font-weight: normal;
+
+  @include mq(mobile) {
+    font-size: rem(32);
+    line-height: rem(40);
+  }
+
+  a {
+    color: $header-link;
+  }
+}
+
+h3 {
+  @include font-style('semibold');
+  font-size: rem(24);
+}
+
+h4 {
+  @include font-style('semibold');
+  font-size: rem(24);
+}
+
+a, a:link, a:visited {
+  color: $purple;
+
+  &:hover {
+    color: $dark-purple;
+  }
+}

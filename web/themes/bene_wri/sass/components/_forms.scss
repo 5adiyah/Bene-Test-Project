@@ -1,0 +1,10 @@
+.region-content form {
+  input[type=submit] {
+    @extend %button;
+  }
+  @include mq(desktop) {
+    margin-left: 0;
+    padding: 0;
+    width: 95%;
+  }
+}

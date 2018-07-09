@@ -1,0 +1,15 @@
+bene_pink:
+  version: VERSION
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/main.js: {}
+addthis:
+  remote: https://www.addthis.com
+  version: 300
+  license:
+      name: None
+      gpl-compatible: false
+  js:
+    https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54a4827f08533c22&async=1: { type: external, minified: true, defer: true, async: true }

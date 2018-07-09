@@ -1,0 +1,29 @@
+.block-hero {
+  display: block;
+  min-height: rem(333);
+
+  h1 {
+    @include font-style('ss-bold');
+    background-color: rgba($pitch, 0.55);
+    bottom: 0;
+    font-size: rem(46);
+    line-height: rem(56);
+    padding: 1rem;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+
+    @include mq(desktop) {
+      padding: 1rem 1.5rem;
+    }
+  }
+
+  h1 span {
+    display: inline-block;
+    max-width: rem(860);
+  }
+
+  .field--name-bene-lead a {
+    margin-left: 0.5rem;
+  }
+}

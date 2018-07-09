@@ -1,0 +1,17 @@
+name: migrate_google_sheets_example
+type: module
+description: Migrate Google Sheets Example
+# core: 8.x
+package: Migrate
+dependencies:
+  - migrate_plus
+  - migrate_tools
+  - migrate_google_sheets
+  - migrate_google_sheets:migrate_google_sheets_example_setup
+  - redirect
+
+# Information added by Drupal.org packaging script on 2017-01-04
+version: '8.x-1.0-beta1'
+core: '8.x'
+project: 'migrate_google_sheets'
+datestamp: 1483566244

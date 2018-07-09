@@ -1,0 +1,12 @@
+.salsa fieldset {
+    padding-bottom: 20px !important;
+}
+
+.salsa .orderform #left_container, .salsa .orderform #left_container {
+	float: left;
+	clear: none;
+}
+
+.salsa .orderform #left_container {
+	margin-right: 10px;
+}

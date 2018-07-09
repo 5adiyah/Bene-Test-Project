@@ -1,0 +1,60 @@
+@mixin font-style($style) {
+  @if $style == 'italic' { // Italic Light
+    font-family: $font;
+    font-style: italic; 
+    font-weight: 300; 
+  } @else if $style == 'regular' {
+    font-family: $font;
+    font-weight: 400;
+    font-style: normal;
+  } @else if $style == 'semibold' {
+    font-family: $font;
+    font-weight: 600;
+    font-style: normal;
+  } @else if $style == 'bold' {
+    font-family: $font;
+    font-weight: 700;
+    font-style: normal;
+  } @else if $style == 'black' {
+    font-family: $font;
+    font-weight: 900;
+    font-style: normal;
+  } @else if $style == 'light' { // Light is the default font
+    font-family: $font;
+    font-weight: 300; 
+    font-style: normal;
+  }
+}
+
+@mixin button-cta() {
+  border: rem(2) solid $white; 
+  border-radius: 0;
+  color: $white;
+  padding: 1rem 2rem;
+  font-size: rem(14);
+  @include font-style('bold');
+  text-transform: uppercase;
+
+  &:hover {
+    color: $black;
+    background-color: $white;
+  }
+}
+
+@mixin button-rich-text() {
+  border: rem(1) solid $purple; 
+  background-color: transparent;
+  border-radius: 0;
+  color: $purple;
+  font-size: rem(12);
+  letter-spacing: 0;
+  padding: 1rem;
+  @include font-style('regular');
+  text-transform: none;
+
+  &:hover {
+    border-color: $dark-purple; 
+    background-color: $dark-purple;
+    color: $white;
+  }
+}

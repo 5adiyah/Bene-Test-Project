@@ -1,0 +1,43 @@
+a.button,
+.button,
+%button {
+    @include font-style('ss-semibold');
+    background-color: transparent;
+    border: rem(2) solid $green-4;
+    border-radius: rem(50);
+    color: $green-4;
+    text-transform: none;
+    font-size: rem(20);
+    letter-spacing: 0;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    @include transition(0.5s background-color, 0.5s color, 0.5s border);
+
+    &:hover {
+      background-color: $green-4;
+      color: $white;
+      text-decoration: none;
+      @include transition(0.5s background-color, 0.5s color, 0.5s border);
+    }
+}
+a.button-solid,
+.button-solid,
+%button-solid {
+    @include font-style('ss-semibold');
+    background-color: $green-4;
+    border: rem(2) solid $green-4;
+    border-radius: rem(50);
+    color: $white;
+    font-size: rem(20);
+    letter-spacing: 0;
+    padding: 0.75rem 1.5rem;
+    @include transition(0.5s background-color, 0.5s color, 0.5s border);
+
+
+    &:hover {
+      background-color: $white;
+      border-color: $white;
+      color: $green-4;
+      @include transition(0.5s background-color, 0.5s color, 0.5s border);
+    }
+}

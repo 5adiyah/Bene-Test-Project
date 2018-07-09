@@ -1,0 +1,165 @@
+.page-node-type-page .block-system-main-block {
+  .field--name-bene-intro {
+    max-width: rem(800);
+
+    h2 { 
+      color: $blue;
+      margin-top: 0.5rem;
+    }
+    
+    h3 {
+      @include font-style('open');
+      color: $blue;
+      font-size: rem(30);
+      line-height: rem(41);
+      margin-bottom: 0.5rem;
+
+      a       { color: $green; }
+      a:hover { color: $dark-green; }
+    }
+    
+    p {
+      @include font-style('open');
+      line-height: rem(38);
+      &.byline {
+        @extend .byline;
+      }
+    }
+
+    blockquote {
+      background-image: linear-gradient(-90deg, #FDFDFD 5%, #F3F3F3 100%);
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      max-width: 100%;
+      padding: 2.5rem;
+
+      p {
+        @include font-style('oswald-semibold');
+        font-size: rem(24);
+        float: none;
+        line-height: rem(36);
+        text-transform: uppercase;
+        font-style: normal;
+        text-align: center;
+        &.byline {
+          color: lighten($text-gray, 10%);
+          font-size: 1em;
+          line-height: 1.35em;
+          margin-bottom: rem(4);
+          margin-top: rem(4);
+          text-transform: none;
+          &:before,
+          &:after {
+            content:'';
+          }
+        }
+      }
+
+      &:after {
+        background: url('../img/blockquote-delimiter.svg') center center no-repeat;
+        height: rem(7);
+        margin-top: 1rem;
+        width: rem(81);
+      }
+    }
+
+
+  }
+
+  
+  .paragraph--type--rich-text {
+    float: none;
+    max-width: rem(800);
+    margin-left: auto;
+    margin-right: auto !important;
+    margin-bottom: 2rem;
+    p { 
+      color: $text-gray;
+      @include font-style('open');
+      font-size: rem(16);
+      line-height: rem(34);
+    }
+
+    blockquote {
+      background-image: linear-gradient(-90deg, #FDFDFD 5%, #F3F3F3 100%);
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      max-width: 100%;
+      padding: 2.5rem;
+      
+      p {
+        color: $orange;
+        @include font-style('oswald-semibold');
+        font-size: rem(24);
+        float: none;
+        line-height: rem(36);
+        text-transform: uppercase;
+        font-style: normal;
+        text-align: center;
+        &.byline {
+          color: lighten($text-gray, 10%);
+          font-size: 1em;
+          line-height: 1.35em;
+          margin-bottom: rem(4);
+          margin-top: rem(4);
+          text-transform: none;
+          &:before,
+          &:after {
+            content:'';
+          }
+        }
+      }
+
+      &:after {
+        background: url('../img/blockquote-delimiter.svg') center center no-repeat;
+        height: rem(7);
+        margin-top: 1rem;
+        width: rem(81);
+      }
+    }
+  }
+
+  // Full width paragraph
+  .paragraph--type--feature-full-width {
+    background-color: transparent;
+    
+    .field--name-field-title { 
+      @include font-style('oswald-semibold');
+      font-size: rem(28);
+      text-transform: uppercase;
+    }
+
+    .field--name-field-text p {
+      font-size: rem(18);
+      line-height: rem(34);
+      margin-top: 0.5rem;
+    }
+
+    .field--type-link a {
+      background-color: $orange;
+      border-radius: 0;
+      @include font-style('oswald-bold');   
+      font-size: rem(16);
+      text-transform: uppercase;
+
+      &:hover {
+        color: $white;
+        background-color: $dark-orange;
+      }
+    }
+
+    &.no-image {
+      background-image: linear-gradient(to right, rgba(0,128,148,1) 29%, rgba(0,126,147,1) 32%, rgba(6,70,129,1) 100%);
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  .embedded-entity.align-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}

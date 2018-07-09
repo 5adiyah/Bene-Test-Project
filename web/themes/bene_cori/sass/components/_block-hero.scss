@@ -1,0 +1,23 @@
+.block-hero {
+  h1 {
+    @include font-style('open-extra');
+    text-transform: uppercase;
+
+    @include mq(desktop) {
+      font-size: rem(48);
+    }
+  }
+
+  // Gradient overlay
+  &::after {
+    background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, #000000 86%);
+    content: '';
+    display: block;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,114 @@
+***************
+*** 10,20 ****
+  use Drupal\Core\Entity\EntityStorageInterface;
+  use Drupal\Core\Entity\EntityTypeInterface;
+  use Drupal\Core\Routing\CurrentRouteMatch;
+  use Drupal\migrate_plus\Entity\MigrationGroup;
+- use Drupal\migrate_plus\Plugin\MigrationConfigEntityPluginManager;
+  use Drupal\Core\Url;
+  use Symfony\Component\DependencyInjection\ContainerInterface;
+- use Drupal\Core\Datetime\DateFormatter;
+  
+  /**
+   * Provides a listing of migration entities in a given group.
+--- 10,19 ----
+  use Drupal\Core\Entity\EntityStorageInterface;
+  use Drupal\Core\Entity\EntityTypeInterface;
+  use Drupal\Core\Routing\CurrentRouteMatch;
++ use Drupal\migrate\Plugin\MigrationPluginManagerInterface;
+  use Drupal\migrate_plus\Entity\MigrationGroup;
+  use Drupal\Core\Url;
+  use Symfony\Component\DependencyInjection\ContainerInterface;
+  
+  /**
+   * Provides a listing of migration entities in a given group.
+***************
+*** 35,43 ****
+    /**
+     * Plugin manager for migration plugins.
+     *
+-    * @var \Drupal\migrate_plus\Plugin\MigrationConfigEntityPluginManager
+     */
+-   protected $migrationConfigEntityPluginManager;
+  
+    /**
+     * Constructs a new EntityListBuilder object.
+--- 34,42 ----
+    /**
+     * Plugin manager for migration plugins.
+     *
++    * @var \Drupal\migrate\Plugin\MigrationPluginManagerInterface
+     */
++   protected $migrationPluginManager;
+  
+    /**
+     * Constructs a new EntityListBuilder object.
+***************
+*** 48,60 ****
+     *   The entity storage class.
+     * @param \Drupal\Core\Routing\CurrentRouteMatch $current_route_match
+     *   The current route match service.
+-    * @param \Drupal\migrate_plus\Plugin\MigrationConfigEntityPluginManager $migration_config_entity_plugin_manager
+     *   The plugin manager for config entity-based migrations.
+     */
+-   public function __construct(EntityTypeInterface $entity_type, EntityStorageInterface $storage, CurrentRouteMatch $current_route_match, MigrationConfigEntityPluginManager $migration_config_entity_plugin_manager) {
+      parent::__construct($entity_type, $storage);
+      $this->currentRouteMatch = $current_route_match;
+-     $this->migrationConfigEntityPluginManager = $migration_config_entity_plugin_manager;
+    }
+  
+    /**
+--- 47,59 ----
+     *   The entity storage class.
+     * @param \Drupal\Core\Routing\CurrentRouteMatch $current_route_match
+     *   The current route match service.
++    * @param \Drupal\migrate\Plugin\MigrationPluginManagerInterface $migration_plugin_manager
+     *   The plugin manager for config entity-based migrations.
+     */
++   public function __construct(EntityTypeInterface $entity_type, EntityStorageInterface $storage, CurrentRouteMatch $current_route_match, MigrationPluginManagerInterface $migration_plugin_manager) {
+      parent::__construct($entity_type, $storage);
+      $this->currentRouteMatch = $current_route_match;
++     $this->migrationPluginManager = $migration_plugin_manager;
+    }
+  
+    /**
+***************
+*** 65,71 ****
+        $entity_type,
+        $container->get('entity.manager')->getStorage($entity_type->id()),
+        $container->get('current_route_match'),
+-       $container->get('plugin.manager.config_entity_migration')
+      );
+    }
+  
+--- 64,70 ----
+        $entity_type,
+        $container->get('entity.manager')->getStorage($entity_type->id()),
+        $container->get('current_route_match'),
++       $container->get('plugin.manager.migration')
+      );
+    }
+  
+***************
+*** 125,134 ****
+     * @return array
+     *   A render array of the table row for displaying the plugin information.
+     *
+-    * @see Drupal\Core\Entity\EntityListController::render()
+     */
+    public function buildRow(EntityInterface $migration_entity) {
+-     $migration = $this->migrationConfigEntityPluginManager->createInstance($migration_entity->id());
+      $migration_group = $migration->get('migration_group');
+      if (!$migration_group) {
+        $migration_group = 'default';
+--- 124,133 ----
+     * @return array
+     *   A render array of the table row for displaying the plugin information.
+     *
++    * @see \Drupal\Core\Entity\EntityListController::render()
+     */
+    public function buildRow(EntityInterface $migration_entity) {
++     $migration = $this->migrationPluginManager->createInstance($migration_entity->id());
+      $migration_group = $migration->get('migration_group');
+      if (!$migration_group) {
+        $migration_group = 'default';

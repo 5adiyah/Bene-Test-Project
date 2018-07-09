@@ -1,0 +1,17 @@
+name: Free Geek
+type: theme
+description: FreeGeek sub theme for Bene
+package: Other
+core: 8.x
+libraries:
+  - bene_frgk/bene_frgk
+  - bene_frgk/facebook_pixel
+
+base theme: bene_base
+
+regions:
+  site_branding: Site Branding
+  primary_nav: Primary Nav
+  secondary_nav: Secondary Nav
+  content: Content
+  footer: Footer

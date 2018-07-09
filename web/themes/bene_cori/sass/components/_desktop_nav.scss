@@ -1,0 +1,69 @@
+.site-header {
+  background-image: linear-gradient(-90deg, #034078 23%, #034078 33%, #1A5D9B 82%);
+}
+.site-header .desktop-nav {
+
+  .menu {
+    @include align-items(center);
+    text-align: center;
+  }
+  
+  // Remove carat from nested menu
+  .menu-item--collapsed {
+    list-style: none;
+  }
+
+  .menu--utility {
+    .menu-item a {
+      color: $white;
+      @include font-style('open-bold');
+      font-size: rem(13);
+      text-transform: uppercase;
+    }
+
+    .menu-item a:hover,
+    .menu-item a.is-active {
+      color: $orange;
+    }
+
+    // Undo old donate button
+    .menu-item:last-child a {
+      background: none;
+      color: $white;
+      border-radius: 0;
+      @include font-style('open-bold');
+      padding: 0;
+      top: 0;
+      text-transform: uppercase;
+    }
+  }
+
+
+  .menu--main {
+    .menu-item a {
+      color: $white;
+      @include font-style('oswald-medium');
+      font-size: rem(20);
+      letter-spacing: rem(0.54);
+    }
+
+    .menu-item a:hover,
+    .menu-item a.is-active {
+      color: $orange;
+    }
+
+    // Donate button
+    .menu-item:last-child a {
+      color: $orange;
+      background-color: $white;
+      @include font-style('oswald-medium');
+      font-size: rem(18);
+      padding: 0.5rem 1rem;
+    }
+
+    .menu-item:last-child a:hover {
+      background-color: $orange;
+      color: $white;
+    }
+  }
+}

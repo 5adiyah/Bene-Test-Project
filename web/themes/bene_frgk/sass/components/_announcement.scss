@@ -1,0 +1,33 @@
+#block-globalannouncement {
+  background-color: $chartreuse;
+  padding: 0.75rem 1rem;
+  border-color: #21586C;
+  border-style: solid;
+  border-width: 2px 0px 2px 0px;
+  
+  h2 {
+    font-size: rem(24);
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    color: $dark-blue;
+  }
+  
+  .field--name-bene-lead {
+    font-size: rem(24);
+    font-weight: bold;
+    text-align: center;
+    color: $dark-blue;
+  }
+  
+  .field--name-bene-title {
+    font-size: rem(22);
+    text-align: center;
+    color: $dark-blue;
+  }
+  
+  .field--name-bene-link {
+    font-size: rem(22);
+    text-align: center;
+  }
+}

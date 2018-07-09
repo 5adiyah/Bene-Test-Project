@@ -1,0 +1,73 @@
+@mixin font-style($style) {
+  @if $style == 'open' { // Italic Light
+    font-family: bav(font-family-primary); // in case css variables are not supported
+    font-family: var(--base_style-font-family);
+    font-weight: 400;
+  } @else if $style == 'open-italic' {
+    font-family: bav(font-family-primary); // in case css variables are not supported
+    font-family: var(--base_style-font-family);
+    font-weight: 400;
+    font-style: italic;
+  } @else if $style == 'open-bold' {
+    font-family: bav(font-family-primary); // in case css variables are not supported
+    font-family: var(--base_style-font-family);
+    font-weight: 700;
+  } @else if $style == 'open-extra' {
+    font-family: bav(font-family-primary); // in case css variables are not supported
+    font-family: var(--base_style-font-family);
+    font-weight: 800;
+  } @else if $style == 'oswald' {
+    font-family: bav(font-family-secondary); // in case css variables are not supported
+    font-family: var(--base_style-font-family-secondary);
+    font-weight: 400;
+  } @else if $style == 'oswald-medium' {
+    font-family: bav(font-family-secondary); // in case css variables are not supported
+    font-family: var(--base_style-font-family-secondary);
+    font-weight: 500;
+  } @else if $style == 'oswald-semibold' {
+    font-family: bav(font-family-secondary); // in case css variables are not supported
+    font-family: var(--base_style-font-family-secondary);
+    font-weight: 600;
+  } @else if $style == 'oswald-bold' {
+    font-family: bav(font-family-secondary); // in case css variables are not supported
+    font-family: var(--base_style-font-family-secondary);
+    font-weight: 700;
+  }
+}
+
+@mixin button($color: bbv(main-white), $bgcolor: bbv(main-black)) {
+  @include transition(background-color 0.3s linear,color 0.3s linear);
+  background-color: $bgcolor;
+  border-radius: rem(3);
+  color: $color;
+  font-weight: 800;
+  display: inline-block;
+  font-size: rem(16);
+  letter-spacing: 0.1rem;
+  line-height: 1;
+  padding: rem(20) rem(30);
+  position: relative;
+  text-transform: uppercase;
+  &:hover {
+    background-color: darken($bgcolor, 20%);
+  }
+}
+
+@mixin button-cta() {
+  background-color: bbv(color-background-accent); // in case css variables are not supported
+  background-color: var(--base_style-button-cta-background-color);
+  border-radius: 0;
+  color: bbv(color-text-inverse); // in case css variables are not supported
+  color: var(--base_style-button-cta-color);
+  padding: 1rem 2rem;
+  font-size: rem(16);
+  @include font-style('oswald-semibold');
+  text-transform: uppercase;
+
+  &:hover {
+    color: bbv(color-text-inverse); // in case css variables are not supported
+    color: var(--base_style-button-cta-color);
+    background-color: bbv(color-background-darker); // in case css variables are not supported
+    background-color: var(--base_style-button-cta-background-color-hover);
+  }
+}

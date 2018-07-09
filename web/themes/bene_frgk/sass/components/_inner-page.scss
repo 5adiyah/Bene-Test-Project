@@ -1,0 +1,147 @@
+.page-node-type-page .block-system-main-block {
+  .field--name-bene-intro {
+    margin-left: 0;
+    max-width: 100%;
+
+    h2 {
+      color: $black;
+      font-size: rem(38);
+    }
+
+    p {
+      font-size: rem(24);
+      @include font-style('light');
+      font-weight: 100;
+      line-height: rem(40);
+      @include mq(mobile) {
+        font-size: rem(20);
+      }
+    }
+  }
+
+  .button {
+    margin-bottom: 2rem;
+  }
+
+  .paragraph--type--rich-text {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    h2, h3, h4 {
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ol li,
+    ul li {
+      color: $black;
+      font-size: rem(20);
+      @include font-style('light');
+
+      @include mq(mobile) {
+        font-size: rem(16);
+        line-height: rem(26);
+      }
+    }
+
+    p {
+      @include font-style('light');
+      font-size: rem(20);
+      color: $black;
+
+      @include mq(mobile) {
+        font-size: rem(16);
+        line-height: rem(26);
+      }
+    }
+
+    a.button {
+      @include button-rich-text;
+      font-size: 1rem;
+    }
+
+    blockquote {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      max-width: none;
+      width: 100%;
+
+      p {
+        color: $blue;
+        font-size: rem(36);
+        @include font-style('light');
+        line-height: rem(51);
+      }
+
+      &:after {
+        background-color: $blue;
+        height: 1px;
+        margin-top: 3rem;
+        width: rem(81);
+
+        a.button {
+          border: rem(1) solid $purple;
+          color: $purple;
+          padding: 1rem 2rem;
+
+          &:hover { background: $purple; color: $white; }
+        }
+      }
+    }
+  }
+
+  // Full width paragraph
+  .paragraph--type--feature-full-width {
+    //max-width: rem(1800);
+
+    @include mq(mobile) {
+      padding-top: rem(75);
+      padding-bottom: rem(75);
+    }
+
+    .field--name-field-title {
+      @include font-style('black');
+      font-size: rem(38);
+
+      @include mq(mobile) {
+        font-size: rem(32);
+        line-height: rem(40);
+      }
+    }
+
+    .field--name-field-text p {
+      font-size: rem(20);
+      line-height: rem(34);
+      margin-top: 0.5rem;
+
+      @include mq(mobile) {
+        font-size: rem(16);
+        line-height: rem(25);
+      }
+    }
+
+    .field--type-link a {
+      background-color: transparent;
+      border: rem(1) solid $white;
+      border-radius: 0;
+      @include font-style('semibold');
+      font-size: rem(16);
+      text-transform: uppercase;
+
+      &:hover {
+        color: $blue;
+        background-color: $white;
+      }
+    }
+
+    &.no-image {
+      background-image: linear-gradient(-180deg, #21586C 16%, #3985AC 84%);
+      &:before { display: none; }
+    }
+  }
+
+  .embedded-entity.align-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}

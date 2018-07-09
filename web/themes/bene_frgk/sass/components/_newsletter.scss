@@ -1,0 +1,32 @@
+.block-bene-newsletter-signup-block {
+  
+  .external-newsletter {
+    background-color: $purple;
+    padding: 0.75rem 1rem;
+    @include transition(0.3s background-color);
+
+    // Don't change on hover because the whole area is not clickable.
+    //&:hover {
+    //  background: $dark-purple;
+    //  @include transition(0.3s background-color);
+    //}
+  }
+
+  .external-newsletter a {
+    background: transparent url('../img/chevron-right-white.svg') right center no-repeat;
+    color: $white;
+    @include font-style('bold');
+    font-size: rem(24);
+    padding-right: 2rem;
+    
+    &:hover {
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    &::after { 
+      content: ''; 
+      display: none;
+    }
+  }
+}

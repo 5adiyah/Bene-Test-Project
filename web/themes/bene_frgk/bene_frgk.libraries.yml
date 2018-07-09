@@ -1,0 +1,12 @@
+bene_frgk:
+  version: VERSION
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/main.js: {}
+
+facebook_pixel:
+  header: true
+  js:
+    js/facebook_pixel.js: {}

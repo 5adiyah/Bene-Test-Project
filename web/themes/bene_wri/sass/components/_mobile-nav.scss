@@ -1,0 +1,51 @@
+.mobile-menu-toggle {
+  z-index: 1;
+  position: absolute;
+
+  div:hover span,
+  div span {
+    background-color: $green-1;
+
+    &:before,
+    &:after {
+      background-color: $green-1;
+    }
+  }
+
+  &.active div span {
+    background-color: transparent;
+
+    &:before,
+    &:after {
+      background-color: $green-1;
+    }
+  }
+}
+
+.mobile-nav {
+  .region-primary-nav {
+    background: $green-1;
+  }
+
+  .menu a {
+    color: $white;
+    border: none;
+    padding: 0.5rem 1rem;
+    text-transform: none;
+
+    &:after { display: none; }
+  }
+
+  .menu--utility {
+    .menu li a {
+      font-size: rem(18);
+      @include font-style('ss-semibold');
+      padding: 0.5rem 1rem;
+    }
+
+    .menu li:last-child a {
+      color: $white;
+      background: none;
+    }
+  }
+}

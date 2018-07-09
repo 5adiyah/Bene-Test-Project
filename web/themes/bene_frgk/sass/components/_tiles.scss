@@ -1,0 +1,48 @@
+.paragraph--type--tiles {
+  > .field--name-field-title {
+    color: $black;
+    @include font-style('semibold');
+    font-size: rem(24);
+  }
+}
+
+.paragraph--type--tiles .field--name-field-tiles > .field__item {
+  
+  @include mq(desktop) {
+    margin-bottom: 1rem;
+  }
+  
+  @include mq(xl) {
+    margin-bottom: 1rem;
+  }
+      
+  .field--name-field-image {
+    background-color: $ltgray;
+  }
+  
+  .tile-text {
+    border: rem(3) solid $ltgray;
+    padding: 1rem;
+  }
+
+  .field--name-field-lead {
+    @include font-style('bold');
+    font-size: rem(18);
+    line-height: rem(31);
+  }
+
+  .field--name-field-title {
+    @include font-style('bold');
+    font-size: rem(20);
+    line-height: rem(25);
+    margin-top: 0;
+  }
+
+  .field--name-field-text,
+  .field--name-field-text p {
+    @include font-style('regular');
+    color: $black;
+    font-size: rem(14);
+    line-height: rem(25);
+  }
+}

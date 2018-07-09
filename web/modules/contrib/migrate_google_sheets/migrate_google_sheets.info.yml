@@ -1,0 +1,13 @@
+name: Migrate Google Sheets
+type: module
+description: Source plugin to use Google Sheets JSON feed as the source for a migration
+# core: 8.x
+package: Migrate
+dependencies:
+  - migrate_plus
+
+# Information added by Drupal.org packaging script on 2017-01-04
+version: '8.x-1.0-beta1'
+core: '8.x'
+project: 'migrate_google_sheets'
+datestamp: 1483566244

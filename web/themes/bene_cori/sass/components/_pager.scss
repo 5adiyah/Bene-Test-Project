@@ -1,0 +1,16 @@
+.pager {
+  ul li.pager__item {
+    border-right: rem(3) solid $ltgray;
+    padding: 0.5rem 1rem;
+  }
+
+  ul li.pager__item.pager__item--next,
+  ul li.pager__item.pager__item--last {
+    border-right: none;
+  }
+  
+  ul li a {
+    @include font-style('oswald-medium');
+    font-size: rem(20);
+  }
+}
